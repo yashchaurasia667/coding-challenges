@@ -2,57 +2,60 @@
 #include <raylib.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 #define WINW 1280
 #define WINH 720
 #define FPS 60
 #define STARS 300
-#define RADIUS 6
+#define RADIUS 1
+#define SPEED 1.2
 
 struct star
 {
-  int x, y, z, r;
+  int x;
+  int y;
+  float z;
+  float r;
 };
 
 typedef struct star Star;
 
-void initStars(Star *st[])
+void init(Star *st)
 {
-  for (int i = 0; i < STARS; i++)
-  {
-    st[i] = malloc(sizeof(Star));
-    if (st[i] == NULL)
-    {
-      printf("Failed to allocate memory...\n");
-      exit(1);
-    }
-    st[i]->x = rand() % WINW;
-    st[i]->y = rand() % WINH;
-    st[i]->z = rand() % WINW;
-    st[i]->r = RADIUS;
-  }
+  st->x = (rand() % (int)(WINW)) - (int)(WINW / 2);
+  st->y = (rand() % (int)(WINH)) - (int)(WINH / 2);
+  st->z = SPEED;
+  st->r = RADIUS;
 }
 
 void DrawStar(int x, int y, int r)
 {
-  DrawCircle(x, y, r, WHITE);
+  DrawCircle(x + (int)(WINW / 2), y + (int)(WINH / 2), r, WHITE);
+  printf("%d\t", x);
 }
 
 void update(Star *s)
 {
-  
+  s->x = s->x * s->z;
+  s->y = s->y * s->z;
+  if (s->r < 4)
+    s->r *= 2;
+  if (s->x >= WINW || s->x <= -(int)(WINW / 2) || s->x == 0 || s->y == 0 || s->y >= WINH || s->y <= -(int)(WINH / 2))
+    init(s);
 }
 
 int main()
 {
+  // time_t startTime = time(NULL);
   srand(time(0));
   Star *stars[STARS];
-  initStars(stars);
 
-  // for (int i = 0; i < STARS; i++)
-  // {
-  //   printf("x= %d\n", stars[i]->x);
-  // }
+  for (int i = 0; i < STARS; i++)
+  {
+    stars[i] = (Star *)malloc(sizeof(Star));
+    init(stars[i]);
+  }
 
   InitWindow(WINW, WINH, "Starfield simulation");
   SetTargetFPS(FPS);
@@ -60,9 +63,18 @@ int main()
   while (!WindowShouldClose())
   {
     BeginDrawing();
+    // if (time(NULL) - startTime >= 0.1)
+    // {
     ClearBackground(BLACK);
+    // startTime = time(NULL);
     for (int i = 0; i < STARS; i++)
-      DrawStar(stars[i]->x, stars[i]->y, RADIUS);
+    {
+      DrawStar(stars[i]->x, stars[i]->y, stars[i]->r);
+      update(stars[i]);
+    }
+    usleep(500);
+    // }
+
     EndDrawing();
   }
   return 0;
