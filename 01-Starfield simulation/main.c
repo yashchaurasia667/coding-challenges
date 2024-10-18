@@ -32,7 +32,7 @@ void init(Star *st)
 void DrawStar(int x, int y, int r)
 {
   DrawCircle(x + (int)(WINW / 2), y + (int)(WINH / 2), r, WHITE);
-  printf("%d\t", x);
+  // printf("%d\t", x);
 }
 
 void update(Star *s)
@@ -47,7 +47,6 @@ void update(Star *s)
 
 int main()
 {
-  // time_t startTime = time(NULL);
   srand(time(0));
   Star *stars[STARS];
 
@@ -60,22 +59,24 @@ int main()
   InitWindow(WINW, WINH, "Starfield simulation");
   SetTargetFPS(FPS);
 
+  double startTime = GetTime();
+  const double updateInterval = 0.2;
+
   while (!WindowShouldClose())
   {
     BeginDrawing();
-    // if (time(NULL) - startTime >= 0.1)
-    // {
     ClearBackground(BLACK);
-    // startTime = time(NULL);
     for (int i = 0; i < STARS; i++)
     {
       DrawStar(stars[i]->x, stars[i]->y, stars[i]->r);
-      update(stars[i]);
+      double currentTime = GetTime();
+      if ((currentTime - startTime) >= updateInterval)
+        update(stars[i]);
     }
     usleep(500);
-    // }
 
     EndDrawing();
   }
+  CloseWindow();
   return 0;
 }
