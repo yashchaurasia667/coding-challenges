@@ -2,7 +2,6 @@
 #include <raylib.h>
 #include <stdlib.h>
 #include <time.h>
-#include <unistd.h>
 
 #define WINW 1280
 #define WINH 720
@@ -73,8 +72,6 @@ int main()
       if ((currentTime - startTime) >= updateInterval)
         update(stars[i]);
     }
-    usleep(500);
-
     EndDrawing();
   }
   CloseWindow();
