@@ -1,5 +1,5 @@
+#include <math.h>
 #include <raylib.h>
-#include <rlgl.h>
 #include <stdio.h>
 
 #define FPS 60
@@ -14,16 +14,15 @@ struct cube {
 
 typedef struct cube Cube;
 
-void DrawMengerBase(offsetX, offsetY, offsetZ) {
-  // Cube cube[3][3][3];
+void DrawMengerBase(int offset) {
   for (int z = 0; z < edge; z++) {
     for (int y = 0; y < edge; y++) {
       for (int x = 0; x < edge; x++) {
         if ((x == 1 && y == 1) || (z == 1 && (y == 1 || x == 1)))
           continue;
         else {
-          Vector3 drawPos = {offsetZ + (z * SIDE), offsetY + (y * SIDE),
-                             offsetX + (x * SIDE)};
+          Vector3 drawPos = {offset + (z * SIDE), offset + (y * SIDE),
+                             offset + (x * SIDE)};
           DrawCube(drawPos, SIDE, SIDE, SIDE, BLUE);
           DrawCubeWires(drawPos, SIDE, SIDE, SIDE, DARKBLUE);
         }
@@ -32,10 +31,27 @@ void DrawMengerBase(offsetX, offsetY, offsetZ) {
   }
 }
 
+void DrawMenger(int level) {
+  int blocks = pow(3, level - 1);
+  int offset = blocks * SIDE;
+
+  if (level > 0) {
+    for (int x = 0; x < level; x++) {
+      for (int y = 0; y < level; y++) {
+        for (int z = 0; z < level; z++) {
+          DrawMenger(level - 1);
+        }
+      }
+    }
+    return;
+  }
+  DrawMengerBase(offset);
+}
+
 int main(void) {
   int winw = 800;
   int winh = 600;
-  Cube cube = {0.0f, 0.0f, 0.0f};
+  // Cube cube = {0.0f, 0.0f, 0.0f};
 
   InitWindow(winw, winh, "Menger cube");
   SetExitKey(KEY_Q);
@@ -48,7 +64,7 @@ int main(void) {
   camera.fovy = 45.0f;
   camera.projection = CAMERA_PERSPECTIVE;
 
-  Vector3 cubePos = {cube.x, cube.y, cube.z};
+  // Vector3 cubePos = {cube.x, cube.y, cube.z};
 
   while (!WindowShouldClose()) {
     if (IsMouseButtonDown(MOUSE_BUTTON_LEFT) || IsKeyDown(KEY_W) ||
@@ -61,13 +77,12 @@ int main(void) {
     BeginDrawing();
 
     BeginMode3D(camera);
-    rlPushMatrix();
-    rlSetLineWidth(10.0f);
 
     ClearBackground(BLACK);
 
-    DrawMengerBase(0, 0, 0);
-    rlPopMatrix();
+    DrawMenger(2);
+
+    // DrawMengerBase();
 
     EndMode3D();
 
