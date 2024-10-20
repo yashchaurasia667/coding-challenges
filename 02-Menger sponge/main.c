@@ -1,26 +1,48 @@
-#include "raylib.h"
+#include <raylib.h>
+#include <rlgl.h>
+#include <stdio.h>
 
-#define WINW 800
-#define WINH 600
 #define FPS 60
+#define SIDE 2.0f
+#define edge 3
 
-typedef struct
-{
+struct cube {
   float x;
   float y;
   float z;
-} Cube;
+};
 
-int main(void)
-{
+typedef struct cube Cube;
+
+void DrawMengerBase(offsetX, offsetY, offsetZ) {
+  // Cube cube[3][3][3];
+  for (int z = 0; z < edge; z++) {
+    for (int y = 0; y < edge; y++) {
+      for (int x = 0; x < edge; x++) {
+        if ((x == 1 && y == 1) || (z == 1 && (y == 1 || x == 1)))
+          continue;
+        else {
+          Vector3 drawPos = {offsetZ + (z * SIDE), offsetY + (y * SIDE),
+                             offsetX + (x * SIDE)};
+          DrawCube(drawPos, SIDE, SIDE, SIDE, BLUE);
+          DrawCubeWires(drawPos, SIDE, SIDE, SIDE, DARKBLUE);
+        }
+      }
+    }
+  }
+}
+
+int main(void) {
+  int winw = 800;
+  int winh = 600;
   Cube cube = {0.0f, 0.0f, 0.0f};
 
-  InitWindow(WINW, WINH, "Menger cube");
+  InitWindow(winw, winh, "Menger cube");
+  SetExitKey(KEY_Q);
   SetTargetFPS(60);
 
-  // Define the camera to look into our 3d world
   Camera3D camera = {0};
-  camera.position = (Vector3){0.0f, 10.0f, 10.0f};
+  camera.position = (Vector3){10.0f, 10.0f, 10.0f};
   camera.target = (Vector3){0.0f, 0.0f, 0.0f};
   camera.up = (Vector3){0.0f, 1.0f, 0.0f};
   camera.fovy = 45.0f;
@@ -28,22 +50,26 @@ int main(void)
 
   Vector3 cubePos = {cube.x, cube.y, cube.z};
 
-  while (!WindowShouldClose())
-  {
+  while (!WindowShouldClose()) {
+    if (IsMouseButtonDown(MOUSE_BUTTON_LEFT) || IsKeyDown(KEY_W) ||
+        IsKeyDown(KEY_S) || IsKeyDown(KEY_A) || IsKeyDown(KEY_D) ||
+        IsKeyDown(KEY_Q) || IsKeyDown(KEY_E))
+      UpdateCamera(&camera, CAMERA_FREE);
+
+    if (IsKeyPressed('Z')) camera.target = (Vector3){0.0f, 0.0f, 0.0f};
+
     BeginDrawing();
 
-    ClearBackground(RAYWHITE);
-
     BeginMode3D(camera);
+    rlPushMatrix();
+    rlSetLineWidth(10.0f);
 
-    DrawCube(cubePos, 2.0f, 2.0f, 2.0f, RED);
-    DrawCubeWires(cubePos, 2.0f, 2.0f, 2.0f, MAROON);
+    ClearBackground(BLACK);
 
-    // DrawGrid(10, 1.0f);
+    DrawMengerBase(0, 0, 0);
+    rlPopMatrix();
 
     EndMode3D();
-
-    DrawFPS(10, 10);
 
     EndDrawing();
   }
