@@ -15,14 +15,15 @@ struct cube {
 typedef struct cube Cube;
 
 void DrawMengerBase(int offset) {
-  for (int z = 0; z < edge; z++) {
+  // printf("offset = %d ", offset);
+  for (int x = 0; x < edge; x++) {
     for (int y = 0; y < edge; y++) {
-      for (int x = 0; x < edge; x++) {
+      for (int z = 0; z < edge; z++) {
         if ((x == 1 && y == 1) || (z == 1 && (y == 1 || x == 1)))
           continue;
         else {
-          Vector3 drawPos = {offset + (z * SIDE), offset + (y * SIDE),
-                             offset + (x * SIDE)};
+          Vector3 drawPos = {offset + (x * SIDE), offset + (y * SIDE),
+                             offset + (z * SIDE)};
           DrawCube(drawPos, SIDE, SIDE, SIDE, BLUE);
           DrawCubeWires(drawPos, SIDE, SIDE, SIDE, DARKBLUE);
         }
@@ -31,26 +32,31 @@ void DrawMengerBase(int offset) {
   }
 }
 
-void DrawMenger(int level) {
-  int blocks = pow(3, level - 1);
-  int offset = blocks * SIDE;
+void DrawMenger(int level, int offset) {
+  // int edgeBlocks = pow(edge, level - 1);
+  // int offset = edgeBlocks * SIDE;
+  // printf("offset = %d * %.1f\n", edgeBlocks, SIDE);
 
-  if (level > 0) {
-    for (int x = 0; x < level; x++) {
-      for (int y = 0; y < level; y++) {
-        for (int z = 0; z < level; z++) {
-          DrawMenger(level - 1);
+  printf("offset for level %d = %d\n ", level, offset);
+
+  if (level > 1) {
+    for (int x = 0; x < edge; x++) {
+      for (int y = 0; y < edge; y++) {
+        for (int z = 0; z < edge; z++) {
+          // printf("drawn ");
+          DrawMenger(level - 1, z * pow(3, level - 1) * SIDE);
         }
       }
     }
-    return;
+  } else {
+    DrawMengerBase(offset);
   }
-  DrawMengerBase(offset);
 }
 
 int main(void) {
   int winw = 800;
   int winh = 600;
+  int level = 2;
   // Cube cube = {0.0f, 0.0f, 0.0f};
 
   InitWindow(winw, winh, "Menger cube");
@@ -73,6 +79,10 @@ int main(void) {
       UpdateCamera(&camera, CAMERA_FREE);
 
     if (IsKeyPressed('Z')) camera.target = (Vector3){0.0f, 0.0f, 0.0f};
+    if (IsKeyPressed(KEY_ENTER)) {
+      level++;
+      TraceLog(LOG_INFO, "level = %d", level);
+    }
 
     BeginDrawing();
 
@@ -80,11 +90,12 @@ int main(void) {
 
     ClearBackground(BLACK);
 
-    DrawMenger(2);
+    DrawMenger(level, pow(3, level) * SIDE);
 
     // DrawMengerBase();
 
     EndMode3D();
+    DrawFPS(10, 10);
 
     EndDrawing();
   }
