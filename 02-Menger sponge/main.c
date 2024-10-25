@@ -14,16 +14,15 @@ struct cube {
 
 typedef struct cube Cube;
 
-void DrawMengerBase(int offset) {
-  // printf("offset = %d ", offset);
+void DrawMengerBase(int offsetX, int offsetY, int offsetZ) {
   for (int x = 0; x < edge; x++) {
     for (int y = 0; y < edge; y++) {
       for (int z = 0; z < edge; z++) {
         if ((x == 1 && y == 1) || (z == 1 && (y == 1 || x == 1)))
           continue;
         else {
-          Vector3 drawPos = {offset + (x * SIDE), offset + (y * SIDE),
-                             offset + (z * SIDE)};
+          Vector3 drawPos = {offsetX + (x * SIDE), offsetY + (y * SIDE),
+                             offsetZ + (z * SIDE)};
           DrawCube(drawPos, SIDE, SIDE, SIDE, BLUE);
           DrawCubeWires(drawPos, SIDE, SIDE, SIDE, DARKBLUE);
         }
@@ -32,24 +31,21 @@ void DrawMengerBase(int offset) {
   }
 }
 
-void DrawMenger(int level, int offset) {
-  // int edgeBlocks = pow(edge, level - 1);
-  // int offset = edgeBlocks * SIDE;
-  // printf("offset = %d * %.1f\n", edgeBlocks, SIDE);
-
-  printf("offset for level %d = %d\n ", level, offset);
+void DrawMenger(int level, int offsetX, int offsetY, int offsetZ) {
+  printf("offset for level %d\n ", level);
 
   if (level > 1) {
     for (int x = 0; x < edge; x++) {
       for (int y = 0; y < edge; y++) {
         for (int z = 0; z < edge; z++) {
-          // printf("drawn ");
-          DrawMenger(level - 1, z * pow(3, level - 1) * SIDE);
+          DrawMenger(level - 1, x * pow(3, level - 1) * SIDE,
+                     y * pow(3, level - 1) * SIDE,
+                     z * pow(3, level - 1) * SIDE);
         }
       }
     }
   } else {
-    DrawMengerBase(offset);
+    DrawMengerBase(offsetX, offsetY, offsetZ);
   }
 }
 
@@ -90,7 +86,8 @@ int main(void) {
 
     ClearBackground(BLACK);
 
-    DrawMenger(level, pow(3, level) * SIDE);
+    DrawMenger(level, pow(3, level) * SIDE, pow(3, level) * SIDE,
+               pow(3, level) * SIDE);
 
     // DrawMengerBase();
 
