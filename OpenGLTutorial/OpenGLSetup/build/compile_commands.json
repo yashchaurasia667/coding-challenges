@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hello_window.dir/includes_CXX.rsp -g -o CMakeFiles\\hello_window.dir\\src\\main.cpp.obj -c \"C:\\Users\\yashc\\OneDrive\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\src\\main.cpp\"",
+  "file": "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/main.cpp",
+  "output": "CMakeFiles/hello_window.dir/src/main.cpp.obj"
+}
+]

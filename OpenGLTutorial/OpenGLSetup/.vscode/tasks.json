@@ -12,6 +12,7 @@
         "-L",
         "${workspaceFolder}/dependencies/lib",
         "-lglfw3",
+        "-lglad",
         "-lopengl32",
         "-lgdi32",
         "-o",

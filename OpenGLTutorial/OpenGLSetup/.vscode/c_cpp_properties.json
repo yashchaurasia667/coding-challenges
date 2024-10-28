@@ -1,17 +1,17 @@
 {
-  "configurations": [
-    {
-    "name": "Win32",
-    "includePath": [
-      "${workspaceFolder}/dependencies/include",
-      "${workspaceFolder}/dependencies/lib"
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/dependencies/include",
+                "${workspaceFolder}/dependencies/lib"
+            ],
+            "defines": [],
+            "compilerPath": null,
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
     ],
-    "defines": [],
-    "compilerPath": "C:/MinGW/bin/g++.exe",
-    "cStandard": "c99",
-    "cppStandard": "c++17",
-    "intelliSenseMode": "windows-gcc-x64"
-    }
-  ],
-  "version": 4
+    "version": 4
 }

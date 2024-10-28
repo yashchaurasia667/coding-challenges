@@ -1,16 +1,26 @@
-CC= gcc
-CFLAGS= -Wall -Wextra
-LIBS= -L ./dependencies/lib -lglfw3 -lopengl32 -lgdi32
-DEPENDENCIES= -I ./dependencies/include
+CC= g++
+CFLAGS= -Wall -Wextra -I ./dependencies/include
+LIBS= -L ./dependencies/lib -lglfw3 -lopengl32 -lgdi32 
+OJB = build/main.o build/glad.o
+GLAD_SRC= src/glad.c
+TARGET = build/main.exe
 
-default: main
+default: $(TARGET)
 
-main: main.c
+$(TARGET): $(OJB)
 	mkdir -p build
-	$(CC) $(CFLAGS) -o build/main $(DEPENDENCIES) main.c $(LIBS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
+
+build/main.o: src/main.cpp
+	mkdir -p build
+	$(CC) $(CFLAGS) -c $< -o $@
+
+build/glad.o: $(GLAD_SRC)
+	mkdir -p build
+	gcc $(CFLAGS) -c $< -o $@
 
 clean: build
 	rm -rf build
 
-run: build/main.exe
-	build/main.exe
+run: $(TARGET)
+	$(TARGET)
