@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "hello_window",
+					"name" : "main",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "hello_window::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-hello_window-Debug-8bd5e83bce2ed8497a80.json",
-					"name" : "hello_window",
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-cf74afc2b96dd8dbc309.json",
+					"name" : "main",
 					"projectIndex" : 0
 				}
 			]

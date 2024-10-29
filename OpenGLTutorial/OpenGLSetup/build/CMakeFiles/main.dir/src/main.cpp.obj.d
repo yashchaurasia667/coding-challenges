@@ -1,19 +1,21 @@
-CMakeFiles/hello_window.dir/src/main.cpp.obj: \
+CMakeFiles/main.dir/src/main.cpp.obj: \
  C:\Users\yashc\OneDrive\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\main.cpp \
  C:\Users\yashc\OneDrive\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\config.h \
- C:/Users/yashc/OneDrive/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/GLFW/glfw3.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\stddef.h \
+ C:/Users/yashc/OneDrive/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/glad/glad.h \
+ C:/Users/yashc/OneDrive/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/KHR/khrplatform.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stdint.h \
  c:\mingw\include\stdint.h c:\mingw\include\_mingw.h \
  c:\mingw\include\msvcrtver.h c:\mingw\include\w32api.h \
- c:\mingw\include\sdkddkver.h c:\mingw\include\gl\gl.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream \
+ c:\mingw\include\sdkddkver.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\stddef.h \
+ C:/Users/yashc/OneDrive/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/GLFW/glfw3.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\fstream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iosfwd \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++config.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\os_defines.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\cpu_defines.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iosfwd \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stringfwd.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\memoryfwd.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\postypes.h \
@@ -99,6 +101,13 @@ CMakeFiles/hello_window.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\ctype_inline.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.tcc \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\codecvt.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\basic_file.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++io.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\fstream.tcc \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\sstream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc

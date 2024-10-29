@@ -1,8 +1,14 @@
 [
 {
   "directory": "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build",
-  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hello_window.dir/includes_CXX.rsp -g -o CMakeFiles\\hello_window.dir\\src\\main.cpp.obj -c \"C:\\Users\\yashc\\OneDrive\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\src\\main.cpp\"",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c \"C:\\Users\\yashc\\OneDrive\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\src\\main.cpp\"",
   "file": "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/main.cpp",
-  "output": "CMakeFiles/hello_window.dir/src/main.cpp.obj"
+  "output": "CMakeFiles/main.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\glad.c.obj -c \"C:\\Users\\yashc\\OneDrive\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\src\\glad.c\"",
+  "file": "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/glad.c",
+  "output": "CMakeFiles/main.dir/src/glad.c.obj"
 }
 ]

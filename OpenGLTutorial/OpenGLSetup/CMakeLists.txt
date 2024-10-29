@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
-project(hello_window VERSION 1.0.0)
+project(main VERSION 1.0)
 
-add_executable(hello_window src/config.h src/main.cpp)
+find_package(OpenGL REQUIRED)
 
-target_include_directories(hello_window PRIVATE dependencies/include)
+set(GLFW_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/dependencies/include")
+set(GLFW_LIBRARIES "${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib/libglfw3.a")
 
-set(GLFW_LIB_DIR "${CMAKE_CURRENT_DIR}/dependencies/lib")
-link_directories(GLFW_LIB_DIR)
-target_link_libraries(hello_window glfw3)
+add_executable(main src/config.h src/main.cpp src/glad.c)
+
+target_include_directories(main PRIVATE ${GLFW_INCLUDE_DIRS})
+
+target_link_libraries(main ${GLFW_LIBRARIES} OpenGL::GL)
