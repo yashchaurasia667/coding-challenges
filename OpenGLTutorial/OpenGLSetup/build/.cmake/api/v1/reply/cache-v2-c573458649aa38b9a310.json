@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build"
+			"value" : "c:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -155,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/MinGW/bin/g++.exe"
 		},
 		{
@@ -299,10 +299,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/MinGW/bin/gcc.exe"
 		},
 		{
@@ -587,7 +587,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup"
+			"value" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1435,7 +1435,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build"
+			"value" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build"
 		},
 		{
 			"name" : "main_IS_TOP_LEVEL",
@@ -1459,7 +1459,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup"
+			"value" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup"
 		}
 	],
 	"kind" : "cache",

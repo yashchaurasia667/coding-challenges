@@ -12,8 +12,7 @@
 					[
 						"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
 						"C:/MinGW/include",
-						"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
-						"C:/MinGW/mingw32/include"
+						"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
 					],
 					"linkDirectories" : 
 					[
@@ -62,8 +61,7 @@
 						"C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward",
 						"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
 						"C:/MinGW/include",
-						"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
-						"C:/MinGW/mingw32/include"
+						"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
 					],
 					"linkDirectories" : 
 					[

@@ -7,7 +7,7 @@
                 "${workspaceFolder}/dependencies/lib"
             ],
             "defines": [],
-            "compilerPath": null,
+            "compilerPath": "C:\\MinGW\\bin\\g++.exe",
             "cStandard": "c99",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-gcc-x64"

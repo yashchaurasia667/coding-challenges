@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/src/glad.c.obj: \
- C:\Users\yashc\OneDrive\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\glad.c \
+ C:\Users\yashc\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\glad.c \
  c:\mingw\include\stdio.h c:\mingw\include\_mingw.h \
  c:\mingw\include\msvcrtver.h c:\mingw\include\w32api.h \
  c:\mingw\include\sdkddkver.h \
@@ -8,8 +8,8 @@ CMakeFiles/main.dir/src/glad.c.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stdarg.h \
  c:\mingw\include\stdlib.h c:\mingw\include\string.h \
  c:\mingw\include\strings.h c:\mingw\include\wchar.h \
- C:/Users/yashc/OneDrive/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/glad/glad.h \
- C:/Users/yashc/OneDrive/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/KHR/khrplatform.h \
+ C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/glad/glad.h \
+ C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/KHR/khrplatform.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\stdint.h \
  c:\mingw\include\stdint.h c:\mingw\include\windows.h \
  c:\mingw\include\windef.h c:\mingw\include\winnt.h \

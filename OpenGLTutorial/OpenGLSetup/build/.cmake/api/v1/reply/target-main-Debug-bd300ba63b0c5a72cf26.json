@@ -59,7 +59,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/dependencies/include"
+					"path" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/dependencies/include"
 				}
 			],
 			"language" : "CXX",
@@ -79,7 +79,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/yashc/OneDrive/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/dependencies/include"
+					"path" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/dependencies/include"
 				}
 			],
 			"language" : "C",
@@ -104,7 +104,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "\"C:\\Users\\yashc\\OneDrive\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\dependencies\\lib\\libglfw3.a\"",
+				"fragment" : "\"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\dependencies\\lib\\libglfw3.a\"",
 				"role" : "libraries"
 			},
 			{
