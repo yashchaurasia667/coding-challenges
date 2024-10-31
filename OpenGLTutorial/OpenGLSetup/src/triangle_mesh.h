@@ -9,7 +9,8 @@ public:
 
     // VBO -> Vertex Buffer Object
     // VAO -> Vertex Array Object
+    // EBO -> Element Buffer Object
 private:
-    unsigned int VAO, vertex_count;
+    unsigned int EBO, VAO, vertex_count;
     std::vector<unsigned int> VBOs;
 };

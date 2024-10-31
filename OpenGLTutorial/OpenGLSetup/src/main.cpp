@@ -1,5 +1,6 @@
 #include "config.h"
 #include "triangle_mesh.h"
+#include "material.h"
 
 void frameBufferSizeCallback(GLFWwindow *window, int width, int height)
 {
@@ -131,9 +132,12 @@ int main()
 
   int width, height;
   glfwGetFramebufferSize(window, &width, &height);
+
+  // left, top, width, height
   glViewport(0, 0, width, height);
 
   TriangleMesh *triangle = new TriangleMesh();
+  Material *material = new Material("../img/mouse.jpeg");
 
   unsigned int shader = make_shader(
       "../src/shaders/vertex.txt",
@@ -147,6 +151,7 @@ int main()
 
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(shader);
+    material->use();
     triangle->draw();
 
     // Swap front and back frames

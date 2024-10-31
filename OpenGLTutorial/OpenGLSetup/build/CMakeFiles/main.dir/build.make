@@ -71,11 +71,26 @@ include CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/codegen:
 .PHONY : CMakeFiles/main.dir/codegen
 
+CMakeFiles/main.dir/src/config.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/config.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/config.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/OpenGLSetup/src/config.cpp
+CMakeFiles/main.dir/src/config.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/config.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/config.cpp.obj -MF CMakeFiles\main.dir\src\config.cpp.obj.d -o CMakeFiles\main.dir\src\config.cpp.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\config.cpp"
+
+CMakeFiles/main.dir/src/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/config.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\config.cpp" > CMakeFiles\main.dir\src\config.cpp.i
+
+CMakeFiles/main.dir/src/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/config.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\config.cpp" -o CMakeFiles\main.dir\src\config.cpp.s
+
 CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/OpenGLSetup/src/main.cpp
 CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/main.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.obj -MF CMakeFiles\main.dir\src\main.cpp.obj.d -o CMakeFiles\main.dir\src\main.cpp.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\main.cpp"
 
 CMakeFiles/main.dir/src/main.cpp.i: cmake_force
@@ -90,7 +105,7 @@ CMakeFiles/main.dir/src/glad.c.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/glad.c.obj: CMakeFiles/main.dir/includes_C.rsp
 CMakeFiles/main.dir/src/glad.c.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/OpenGLSetup/src/glad.c
 CMakeFiles/main.dir/src/glad.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/glad.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/src/glad.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/glad.c.obj -MF CMakeFiles\main.dir\src\glad.c.obj.d -o CMakeFiles\main.dir\src\glad.c.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\glad.c"
 
 CMakeFiles/main.dir/src/glad.c.i: cmake_force
@@ -105,7 +120,7 @@ CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/OpenGLSetup/src/triangle_mesh.cpp
 CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/triangle_mesh.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/triangle_mesh.cpp.obj"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/triangle_mesh.cpp.obj -MF CMakeFiles\main.dir\src\triangle_mesh.cpp.obj.d -o CMakeFiles\main.dir\src\triangle_mesh.cpp.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\triangle_mesh.cpp"
 
 CMakeFiles/main.dir/src/triangle_mesh.cpp.i: cmake_force
@@ -116,24 +131,43 @@ CMakeFiles/main.dir/src/triangle_mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/triangle_mesh.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\triangle_mesh.cpp" -o CMakeFiles\main.dir\src\triangle_mesh.cpp.s
 
+CMakeFiles/main.dir/src/material.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/material.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/material.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/OpenGLSetup/src/material.cpp
+CMakeFiles/main.dir/src/material.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/material.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/material.cpp.obj -MF CMakeFiles\main.dir\src\material.cpp.obj.d -o CMakeFiles\main.dir\src\material.cpp.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\material.cpp"
+
+CMakeFiles/main.dir/src/material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/material.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\material.cpp" > CMakeFiles\main.dir\src\material.cpp.i
+
+CMakeFiles/main.dir/src/material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/material.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\src\material.cpp" -o CMakeFiles\main.dir\src\material.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
+"CMakeFiles/main.dir/src/config.cpp.obj" \
 "CMakeFiles/main.dir/src/main.cpp.obj" \
 "CMakeFiles/main.dir/src/glad.c.obj" \
-"CMakeFiles/main.dir/src/triangle_mesh.cpp.obj"
+"CMakeFiles/main.dir/src/triangle_mesh.cpp.obj" \
+"CMakeFiles/main.dir/src/material.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
+main.exe: CMakeFiles/main.dir/src/config.cpp.obj
 main.exe: CMakeFiles/main.dir/src/main.cpp.obj
 main.exe: CMakeFiles/main.dir/src/glad.c.obj
 main.exe: CMakeFiles/main.dir/src/triangle_mesh.cpp.obj
+main.exe: CMakeFiles/main.dir/src/material.cpp.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/OpenGLSetup/dependencies/lib/libglfw3.a
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\OpenGLSetup\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
