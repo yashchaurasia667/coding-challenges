@@ -51,9 +51,14 @@ unsigned int make_module(const std::string &filepath, unsigned int module_type)
 unsigned int make_shader(const std::string &vertex_filepath, const std::string &fragment_filepath)
 {
   std::vector<unsigned int> modules;
+
+  // Add a vertex shader module
   modules.push_back(make_module(vertex_filepath, GL_VERTEX_SHADER));
+
+  // Add a fragment shader module
   modules.push_back(make_module(fragment_filepath, GL_FRAGMENT_SHADER));
 
+  // Attach all the modules then link the program
   unsigned int shader = glCreateProgram();
   for (unsigned int shaderModule : modules)
   {
@@ -95,15 +100,7 @@ int main()
 
   // Using GLFW core profile (CORE profile for modern functions and compatible for older functions)
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-  GLfloat vertices[] = {
-      -0.5f,
-      -0.5f * float(sqrt(3)) / 3,
-      0.5f,
-      -0.5f * float(sqrt(3)) / 3,
-      0.0f,
-      0.5f * float(sqrt(3)) * 3,
-  };
+  glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
 
   // creating a GLFW window
   GLFWwindow *window = glfwCreateWindow(800, 600, "hello world", nullptr, nullptr);
@@ -147,6 +144,7 @@ int main()
   {
     processInput(window);
     glfwPollEvents();
+
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(shader);
     triangle->draw();
@@ -156,6 +154,7 @@ int main()
   }
 
   glDeleteProgram(shader);
+  delete triangle;
   glfwTerminate();
 
   return 0;

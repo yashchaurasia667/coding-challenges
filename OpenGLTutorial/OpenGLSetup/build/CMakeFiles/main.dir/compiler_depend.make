@@ -87,7 +87,6 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ cha
   C:/MinGW/include/errno.h \
   C:/MinGW/include/io.h \
   C:/MinGW/include/locale.h \
-  C:/MinGW/include/math.h \
   C:/MinGW/include/msvcrtver.h \
   C:/MinGW/include/process.h \
   C:/MinGW/include/sdkddkver.h \
@@ -154,7 +153,6 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ cha
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cctype \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/clocale \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cmath \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdint \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdio \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdlib \
@@ -175,7 +173,6 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ cha
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/iosfwd \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/iostream \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/istream \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/math.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/atomic_word.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/basic_file.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++allocator.h \
@@ -214,7 +211,6 @@ CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: C:/Users/yashc/Documents/Stuff/co
   C:/MinGW/include/errno.h \
   C:/MinGW/include/io.h \
   C:/MinGW/include/locale.h \
-  C:/MinGW/include/math.h \
   C:/MinGW/include/msvcrtver.h \
   C:/MinGW/include/process.h \
   C:/MinGW/include/sdkddkver.h \
@@ -281,7 +277,6 @@ CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: C:/Users/yashc/Documents/Stuff/co
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cctype \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cerrno \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/clocale \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cmath \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdint \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdio \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdlib \
@@ -302,7 +297,6 @@ CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: C:/Users/yashc/Documents/Stuff/co
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/iosfwd \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/iostream \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/istream \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/math.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/atomic_word.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/basic_file.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++allocator.h \
@@ -532,8 +526,6 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/cpu_defines.h:
 
 C:/MinGW/include/errno.h:
 
-C:/MinGW/include/math.h:
-
 C:/MinGW/include/process.h:
 
 C:/MinGW/include/sys/stat.h:
@@ -577,8 +569,6 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/fstream.tcc:
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functional_hash.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/istream.tcc:
-
-C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/math.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/move.h:
 
@@ -631,8 +621,6 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cctype:
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cerrno:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/clocale:
-
-C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cmath:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdint:
 
