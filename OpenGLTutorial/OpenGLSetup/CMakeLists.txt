@@ -6,7 +6,7 @@ find_package(OpenGL REQUIRED)
 set(GLFW_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/dependencies/include")
 set(GLFW_LIBRARIES "${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib/libglfw3.a")
 
-add_executable(main src/config.h src/main.cpp src/glad.c)
+add_executable(main src/config.h src/main.cpp src/glad.c src/triangle_mesh.cpp)
 
 target_include_directories(main PRIVATE ${GLFW_INCLUDE_DIRS})
 

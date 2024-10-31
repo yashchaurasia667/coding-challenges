@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/glad.c" "CMakeFiles/main.dir/src/glad.c.obj" "gcc" "CMakeFiles/main.dir/src/glad.c.obj.d"
   "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.obj" "gcc" "CMakeFiles/main.dir/src/main.cpp.obj.d"
+  "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/triangle_mesh.cpp" "CMakeFiles/main.dir/src/triangle_mesh.cpp.obj" "gcc" "CMakeFiles/main.dir/src/triangle_mesh.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

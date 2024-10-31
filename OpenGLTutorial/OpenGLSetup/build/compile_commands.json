@@ -10,5 +10,11 @@
   "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\glad.c.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\src\\glad.c\"",
   "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/glad.c",
   "output": "CMakeFiles/main.dir/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\src\\triangle_mesh.cpp.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\OpenGLSetup\\src\\triangle_mesh.cpp\"",
+  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/OpenGLSetup/src/triangle_mesh.cpp",
+  "output": "CMakeFiles/main.dir/src/triangle_mesh.cpp.obj"
 }
 ]

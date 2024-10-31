@@ -1,4 +1,5 @@
 #include "config.h"
+#include "triangle_mesh.h"
 
 void frameBufferSizeCallback(GLFWwindow *window, int width, int height)
 {
@@ -24,6 +25,7 @@ unsigned int make_module(const std::string &filepath, unsigned int module_type)
   {
     bufferedLines << line << "\n";
   }
+
   std::string shaderSource = bufferedLines.str();
   const char *shaderSrc = shaderSource.c_str();
   bufferedLines.str("");
@@ -95,9 +97,12 @@ int main()
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   GLfloat vertices[] = {
-      -0.5f, -0.5f * float(sqrt(3)) / 3,
-      0.5f, -0.5f * float(sqrt(3)) / 3,
-      0.0f, 0.5f * float(sqrt(3)) * 3,
+      -0.5f,
+      -0.5f * float(sqrt(3)) / 3,
+      0.5f,
+      -0.5f * float(sqrt(3)) / 3,
+      0.0f,
+      0.5f * float(sqrt(3)) * 3,
   };
 
   // creating a GLFW window
@@ -127,9 +132,15 @@ int main()
   // Specify the color of the background
   glClearColor(0.25f, 0.5f, 0.75f, 1.0f);
 
+  int width, height;
+  glfwGetFramebufferSize(window, &width, &height);
+  glViewport(0, 0, width, height);
+
+  TriangleMesh *triangle = new TriangleMesh();
+
   unsigned int shader = make_shader(
-      "../src/shader/vertex.txt",
-      "../src/shader/fragment.txt");
+      "../src/shaders/vertex.txt",
+      "../src/shaders/fragment.txt");
 
   // Run while window should not close
   while (!glfwWindowShouldClose(window))
@@ -138,6 +149,9 @@ int main()
     glfwPollEvents();
     glClear(GL_COLOR_BUFFER_BIT);
     glUseProgram(shader);
+    triangle->draw();
+
+    // Swap front and back frames
     glfwSwapBuffers(window);
   }
 

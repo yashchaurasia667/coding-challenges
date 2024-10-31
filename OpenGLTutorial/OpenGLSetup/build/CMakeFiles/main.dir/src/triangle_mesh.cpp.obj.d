@@ -1,5 +1,6 @@
-CMakeFiles/main.dir/src/main.cpp.obj: \
- C:\Users\yashc\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\main.cpp \
+CMakeFiles/main.dir/src/triangle_mesh.cpp.obj: \
+ C:\Users\yashc\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\triangle_mesh.cpp \
+ C:\Users\yashc\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\triangle_mesh.h \
  C:\Users\yashc\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\config.h \
  C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/glad/glad.h \
  C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/OPENGL~1/DEPEND~1/include/KHR/khrplatform.h \
@@ -118,5 +119,4 @@ CMakeFiles/main.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_bvector.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\math.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cmath c:\mingw\include\math.h \
- C:\Users\yashc\Documents\Stuff\coding\ challenges\OpenGLTutorial\OpenGLSetup\src\triangle_mesh.h
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cmath c:\mingw\include\math.h

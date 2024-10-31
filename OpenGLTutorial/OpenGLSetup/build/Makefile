@@ -176,6 +176,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/triangle_mesh.obj: src/triangle_mesh.cpp.obj
+.PHONY : src/triangle_mesh.obj
+
+# target to build an object file
+src/triangle_mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/triangle_mesh.cpp.obj
+.PHONY : src/triangle_mesh.cpp.obj
+
+src/triangle_mesh.i: src/triangle_mesh.cpp.i
+.PHONY : src/triangle_mesh.i
+
+# target to preprocess a source file
+src/triangle_mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/triangle_mesh.cpp.i
+.PHONY : src/triangle_mesh.cpp.i
+
+src/triangle_mesh.s: src/triangle_mesh.cpp.s
+.PHONY : src/triangle_mesh.s
+
+# target to generate assembly for a file
+src/triangle_mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/triangle_mesh.cpp.s
+.PHONY : src/triangle_mesh.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -191,6 +215,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/triangle_mesh.obj
+	@echo ... src/triangle_mesh.i
+	@echo ... src/triangle_mesh.s
 .PHONY : help
 
 
