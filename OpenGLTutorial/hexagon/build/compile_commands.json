@@ -1,20 +1,20 @@
 [
 {
-  "directory": "C:/Users/yashc/Documents/Stuff/c/hexagon/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\main.c.obj -c C:\\Users\\yashc\\Documents\\Stuff\\c\\hexagon\\src\\main.c",
-  "file": "C:/Users/yashc/Documents/Stuff/c/hexagon/src/main.c",
+  "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\main.c.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\main.c\"",
+  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/main.c",
   "output": "CMakeFiles/hex.dir/src/main.c.obj"
 },
 {
-  "directory": "C:/Users/yashc/Documents/Stuff/c/hexagon/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\glad.c.obj -c C:\\Users\\yashc\\Documents\\Stuff\\c\\hexagon\\src\\glad.c",
-  "file": "C:/Users/yashc/Documents/Stuff/c/hexagon/src/glad.c",
+  "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\glad.c.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\glad.c\"",
+  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/glad.c",
   "output": "CMakeFiles/hex.dir/src/glad.c.obj"
 },
 {
-  "directory": "C:/Users/yashc/Documents/Stuff/c/hexagon/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\utils.c.obj -c C:\\Users\\yashc\\Documents\\Stuff\\c\\hexagon\\src\\utils.c",
-  "file": "C:/Users/yashc/Documents/Stuff/c/hexagon/src/utils.c",
+  "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\utils.c.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\utils.c\"",
+  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/utils.c",
   "output": "CMakeFiles/hex.dir/src/utils.c.obj"
 }
 ]

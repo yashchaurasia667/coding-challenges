@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "hex::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-hex-Debug-e8f8799302eed7a574c6.json",
+					"jsonFile" : "target-hex-Debug-92a50d3df576b3e0f11d.json",
 					"name" : "hex",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/yashc/Documents/Stuff/c/hexagon/build",
-		"source" : "C:/Users/yashc/Documents/Stuff/c/hexagon"
+		"build" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
+		"source" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon"
 	},
 	"version" : 
 	{
