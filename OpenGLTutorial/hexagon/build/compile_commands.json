@@ -16,5 +16,11 @@
   "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hex.dir/includes_CXX.rsp -g -o CMakeFiles\\hex.dir\\src\\utils.cpp.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\utils.cpp\"",
   "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/utils.cpp",
   "output": "CMakeFiles/hex.dir/src/utils.cpp.obj"
+},
+{
+  "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hex.dir/includes_CXX.rsp -g -o CMakeFiles\\hex.dir\\src\\triangle.cpp.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\triangle.cpp\"",
+  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/triangle.cpp",
+  "output": "CMakeFiles/hex.dir/src/triangle.cpp.obj"
 }
 ]

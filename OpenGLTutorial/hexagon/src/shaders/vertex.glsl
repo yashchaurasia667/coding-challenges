@@ -1,9 +1,9 @@
 #version 330 core
 
 layout (location=0) in vec3 vertexPos;
-layout (location=1) int colorIndex;
+layout (location=1) in int colorIndex;
 
-out vec4 fragmentColor;
+out vec3 fragmentColor;
 
 const vec3 colors[3] = vec3[] (
   vec3(1.0, 0.0, 0.0),
@@ -13,5 +13,5 @@ const vec3 colors[3] = vec3[] (
 
 void main() {
   gl_Position = vec4(vertexPos, 1.0);
-  fragmentColor = vec4(colors[colorIndex], 1.0);
+  fragmentColor = colors[colorIndex];
 }

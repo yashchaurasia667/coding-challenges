@@ -1,9 +1,9 @@
 #version 330 core
 
-layout (location=0) in vec4 fragmentColor;
+in vec3 fragmentColor;
 
 out vec4 screenColor;
 
 void main() {
-  screenColor = fragmentColor;
+  screenColor = vec4(fragmentColor, 1.0);
 }

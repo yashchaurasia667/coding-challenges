@@ -11,6 +11,7 @@ add_executable(
   src/main.cpp
   src/glad.c
   src/utils.cpp
+  src/triangle.cpp
 )
 
 target_include_directories(hex PRIVATE ${INCLUDE_DIR})

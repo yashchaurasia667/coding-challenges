@@ -116,4 +116,5 @@ CMakeFiles/hex.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
  C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/hexagon/DEPEND~1/include/glad/glad.h \
  C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/hexagon/DEPEND~1/include/KHR/khrplatform.h \
- C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/hexagon/DEPEND~1/include/GLFW/glfw3.h
+ C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/hexagon/DEPEND~1/include/GLFW/glfw3.h \
+ C:/Users/yashc/DOCUME~1/Stuff/CODING~1/OPENGL~1/hexagon/DEPEND~1/include/triangle.h

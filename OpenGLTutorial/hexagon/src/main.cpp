@@ -1,4 +1,5 @@
 #include "utils.h"
+#include "triangle.h"
 
 // creating shader
 unsigned int make_module(const std::string &filepath, unsigned int module_type)
@@ -93,13 +94,17 @@ int main()
 
   make_shader("../src/shaders/vertex.glsl", "../src/shaders/fragment.glsl");
 
+  Triangle *triangle = new Triangle();
+
   while (!glfwWindowShouldClose(window))
   {
     glClear(GL_COLOR_BUFFER_BIT);
+    triangle->draw();
     glfwPollEvents();
     glfwSwapBuffers(window);
   }
 
+  triangle->~Triangle();
   glfwDestroyWindow(window);
   glfwTerminate();
 
