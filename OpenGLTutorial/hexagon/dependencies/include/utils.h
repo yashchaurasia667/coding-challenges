@@ -1,14 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#pragma once
+
+#include <iostream>
+#include <vector>
+
+#include <fstream>
+#include <sstream>
+#include <string>
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#ifndef UTILS_H
-#define UTILS_H
-
 void errorCallback(int error, const char *description);
 int initGLFW(GLFWwindow **window);
-int initGlad();
+int initGlad(GLFWwindow **window);
 void frameBufferCallback(GLFWwindow *window, int width, int height);
-
-#endif

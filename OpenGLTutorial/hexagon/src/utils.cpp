@@ -1,7 +1,7 @@
 #include "utils.h"
 
-#define winw 800
-#define winh 600
+#define WINW 800
+#define WINH 600
 
 void errorCallback(int error, const char *description)
 {
@@ -28,7 +28,7 @@ int initGLFW(GLFWwindow **window)
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-  *window = glfwCreateWindow(winw, winh, "Hexagon", NULL, NULL);
+  *window = glfwCreateWindow(WINW, WINH, "Hexagon", NULL, NULL);
 
   if (!*window)
   {
@@ -52,6 +52,6 @@ int initGlad(GLFWwindow **window)
     return -1;
   }
 
-  glViewport(0, 0, winw, winh);
+  glViewport(0, 0, WINW, WINH);
   return 0;
 }

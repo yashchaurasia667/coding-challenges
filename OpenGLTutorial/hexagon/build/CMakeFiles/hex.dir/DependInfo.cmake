@@ -9,8 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/glad.c" "CMakeFiles/hex.dir/src/glad.c.obj" "gcc" "CMakeFiles/hex.dir/src/glad.c.obj.d"
-  "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/main.c" "CMakeFiles/hex.dir/src/main.c.obj" "gcc" "CMakeFiles/hex.dir/src/main.c.obj.d"
-  "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/utils.c" "CMakeFiles/hex.dir/src/utils.c.obj" "gcc" "CMakeFiles/hex.dir/src/utils.c.obj.d"
+  "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/main.cpp" "CMakeFiles/hex.dir/src/main.cpp.obj" "gcc" "CMakeFiles/hex.dir/src/main.cpp.obj.d"
+  "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/utils.cpp" "CMakeFiles/hex.dir/src/utils.cpp.obj" "gcc" "CMakeFiles/hex.dir/src/utils.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,9 +1,9 @@
 [
 {
   "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\main.c.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\main.c\"",
-  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/main.c",
-  "output": "CMakeFiles/hex.dir/src/main.c.obj"
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hex.dir/includes_CXX.rsp -g -o CMakeFiles\\hex.dir\\src\\main.cpp.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\main.cpp\"",
+  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/main.cpp",
+  "output": "CMakeFiles/hex.dir/src/main.cpp.obj"
 },
 {
   "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
@@ -13,8 +13,8 @@
 },
 {
   "directory": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/hex.dir/includes_C.rsp -g -o CMakeFiles\\hex.dir\\src\\utils.c.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\utils.c\"",
-  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/utils.c",
-  "output": "CMakeFiles/hex.dir/src/utils.c.obj"
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/hex.dir/includes_CXX.rsp -g -o CMakeFiles\\hex.dir\\src\\utils.cpp.obj -c \"C:\\Users\\yashc\\Documents\\Stuff\\coding challenges\\OpenGLTutorial\\hexagon\\src\\utils.cpp\"",
+  "file": "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/src/utils.cpp",
+  "output": "CMakeFiles/hex.dir/src/utils.cpp.obj"
 }
 ]

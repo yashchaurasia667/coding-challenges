@@ -62,12 +62,31 @@
 					"path" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/dependencies/include"
 				}
 			],
-			"language" : "C",
+			"language" : "CXX",
 			"sourceIndexes" : 
 			[
 				0,
-				1,
 				2
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/dependencies/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				1
 			]
 		}
 	],
@@ -99,7 +118,7 @@
 				"role" : "libraries"
 			}
 		],
-		"language" : "C"
+		"language" : "CXX"
 	},
 	"name" : "hex",
 	"nameOnDisk" : "hex.exe",
@@ -125,19 +144,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/main.c",
+			"path" : "src/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
+			"compileGroupIndex" : 1,
 			"path" : "src/glad.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/utils.c",
+			"path" : "src/utils.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -71,20 +71,20 @@ include CMakeFiles/hex.dir/flags.make
 CMakeFiles/hex.dir/codegen:
 .PHONY : CMakeFiles/hex.dir/codegen
 
-CMakeFiles/hex.dir/src/main.c.obj: CMakeFiles/hex.dir/flags.make
-CMakeFiles/hex.dir/src/main.c.obj: CMakeFiles/hex.dir/includes_C.rsp
-CMakeFiles/hex.dir/src/main.c.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/hexagon/src/main.c
-CMakeFiles/hex.dir/src/main.c.obj: CMakeFiles/hex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/hex.dir/src/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/hex.dir/src/main.c.obj -MF CMakeFiles\hex.dir\src\main.c.obj.d -o CMakeFiles\hex.dir\src\main.c.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\main.c"
+CMakeFiles/hex.dir/src/main.cpp.obj: CMakeFiles/hex.dir/flags.make
+CMakeFiles/hex.dir/src/main.cpp.obj: CMakeFiles/hex.dir/includes_CXX.rsp
+CMakeFiles/hex.dir/src/main.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/hexagon/src/main.cpp
+CMakeFiles/hex.dir/src/main.cpp.obj: CMakeFiles/hex.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hex.dir/src/main.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hex.dir/src/main.cpp.obj -MF CMakeFiles\hex.dir\src\main.cpp.obj.d -o CMakeFiles\hex.dir\src\main.cpp.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\main.cpp"
 
-CMakeFiles/hex.dir/src/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hex.dir/src/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\main.c" > CMakeFiles\hex.dir\src\main.c.i
+CMakeFiles/hex.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hex.dir/src/main.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\main.cpp" > CMakeFiles\hex.dir\src\main.cpp.i
 
-CMakeFiles/hex.dir/src/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hex.dir/src/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\main.c" -o CMakeFiles\hex.dir\src\main.c.s
+CMakeFiles/hex.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hex.dir/src/main.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\main.cpp" -o CMakeFiles\hex.dir\src\main.cpp.s
 
 CMakeFiles/hex.dir/src/glad.c.obj: CMakeFiles/hex.dir/flags.make
 CMakeFiles/hex.dir/src/glad.c.obj: CMakeFiles/hex.dir/includes_C.rsp
@@ -101,39 +101,39 @@ CMakeFiles/hex.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hex.dir/src/glad.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\glad.c" -o CMakeFiles\hex.dir\src\glad.c.s
 
-CMakeFiles/hex.dir/src/utils.c.obj: CMakeFiles/hex.dir/flags.make
-CMakeFiles/hex.dir/src/utils.c.obj: CMakeFiles/hex.dir/includes_C.rsp
-CMakeFiles/hex.dir/src/utils.c.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/hexagon/src/utils.c
-CMakeFiles/hex.dir/src/utils.c.obj: CMakeFiles/hex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/hex.dir/src/utils.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/hex.dir/src/utils.c.obj -MF CMakeFiles\hex.dir\src\utils.c.obj.d -o CMakeFiles\hex.dir\src\utils.c.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\utils.c"
+CMakeFiles/hex.dir/src/utils.cpp.obj: CMakeFiles/hex.dir/flags.make
+CMakeFiles/hex.dir/src/utils.cpp.obj: CMakeFiles/hex.dir/includes_CXX.rsp
+CMakeFiles/hex.dir/src/utils.cpp.obj: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/hexagon/src/utils.cpp
+CMakeFiles/hex.dir/src/utils.cpp.obj: CMakeFiles/hex.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hex.dir/src/utils.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hex.dir/src/utils.cpp.obj -MF CMakeFiles\hex.dir\src\utils.cpp.obj.d -o CMakeFiles\hex.dir\src\utils.cpp.obj -c "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\utils.cpp"
 
-CMakeFiles/hex.dir/src/utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hex.dir/src/utils.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\utils.c" > CMakeFiles\hex.dir\src\utils.c.i
+CMakeFiles/hex.dir/src/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hex.dir/src/utils.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\utils.cpp" > CMakeFiles\hex.dir\src\utils.cpp.i
 
-CMakeFiles/hex.dir/src/utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hex.dir/src/utils.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\utils.c" -o CMakeFiles\hex.dir\src\utils.c.s
+CMakeFiles/hex.dir/src/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hex.dir/src/utils.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\src\utils.cpp" -o CMakeFiles\hex.dir\src\utils.cpp.s
 
 # Object files for target hex
 hex_OBJECTS = \
-"CMakeFiles/hex.dir/src/main.c.obj" \
+"CMakeFiles/hex.dir/src/main.cpp.obj" \
 "CMakeFiles/hex.dir/src/glad.c.obj" \
-"CMakeFiles/hex.dir/src/utils.c.obj"
+"CMakeFiles/hex.dir/src/utils.cpp.obj"
 
 # External object files for target hex
 hex_EXTERNAL_OBJECTS =
 
-hex.exe: CMakeFiles/hex.dir/src/main.c.obj
+hex.exe: CMakeFiles/hex.dir/src/main.cpp.obj
 hex.exe: CMakeFiles/hex.dir/src/glad.c.obj
-hex.exe: CMakeFiles/hex.dir/src/utils.c.obj
+hex.exe: CMakeFiles/hex.dir/src/utils.cpp.obj
 hex.exe: CMakeFiles/hex.dir/build.make
 hex.exe: C:/Users/yashc/Documents/Stuff/coding\ challenges/OpenGLTutorial/hexagon/dependencies/lib/libglfw3.a
 hex.exe: CMakeFiles/hex.dir/linkLibs.rsp
 hex.exe: CMakeFiles/hex.dir/objects1.rsp
 hex.exe: CMakeFiles/hex.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable hex.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\yashc\Documents\Stuff\coding challenges\OpenGLTutorial\hexagon\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hex.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hex.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

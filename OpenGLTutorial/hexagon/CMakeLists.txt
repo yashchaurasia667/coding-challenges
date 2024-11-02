@@ -8,9 +8,9 @@ set(GLFW_LIB "${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib/libglfw3.a")
 
 add_executable(
   hex
-  src/main.c
+  src/main.cpp
   src/glad.c
-  src/utils.c
+  src/utils.cpp
 )
 
 target_include_directories(hex PRIVATE ${INCLUDE_DIR})

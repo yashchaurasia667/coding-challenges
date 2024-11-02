@@ -152,53 +152,53 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
-src/main.obj: src/main.c.obj
+src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
 # target to build an object file
-src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/main.c.obj
-.PHONY : src/main.c.obj
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
-src/main.i: src/main.c.i
+src/main.i: src/main.cpp.i
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/main.c.i
-.PHONY : src/main.c.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-src/main.s: src/main.c.s
+src/main.s: src/main.cpp.s
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/main.c.s
-.PHONY : src/main.c.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-src/utils.obj: src/utils.c.obj
+src/utils.obj: src/utils.cpp.obj
 .PHONY : src/utils.obj
 
 # target to build an object file
-src/utils.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/utils.c.obj
-.PHONY : src/utils.c.obj
+src/utils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/utils.cpp.obj
+.PHONY : src/utils.cpp.obj
 
-src/utils.i: src/utils.c.i
+src/utils.i: src/utils.cpp.i
 .PHONY : src/utils.i
 
 # target to preprocess a source file
-src/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/utils.c.i
-.PHONY : src/utils.c.i
+src/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
 
-src/utils.s: src/utils.c.s
+src/utils.s: src/utils.cpp.s
 .PHONY : src/utils.s
 
 # target to generate assembly for a file
-src/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/utils.c.s
-.PHONY : src/utils.c.s
+src/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hex.dir\build.make CMakeFiles/hex.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
 
 # Help Target
 help:
