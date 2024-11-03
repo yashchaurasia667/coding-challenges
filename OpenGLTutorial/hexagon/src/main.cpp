@@ -92,15 +92,16 @@ int main()
 
   glClearColor(0.0235f, 0.2784f, 0.1098f, 1.0f);
 
-  make_shader("../src/shaders/vertex.glsl", "../src/shaders/fragment.glsl");
+  unsigned int shader = make_shader("../src/shaders/vertex.glsl", "../src/shaders/fragment.glsl");
 
   Triangle *triangle = new Triangle();
 
   while (!glfwWindowShouldClose(window))
   {
-    glClear(GL_COLOR_BUFFER_BIT);
-    triangle->draw();
     glfwPollEvents();
+    glClear(GL_COLOR_BUFFER_BIT);
+    glUseProgram(shader);
+    triangle->draw();
     glfwSwapBuffers(window);
   }
 
