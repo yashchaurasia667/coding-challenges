@@ -14,7 +14,7 @@ struct drop
 {
   int x;
   int y;
-  int z;
+  float z;
   int width;
   int height;
   float sway;
@@ -26,7 +26,7 @@ void init(Drop *d)
 {
   d->x = (rand() % WINW);
   d->y = (rand() % WINH) - WINH;
-  d->z = 1;
+  d->z = 10;
   d->width = (rand() % 4) + 2;
   d->height = (rand() % 30) + 10;
   d->sway = rand() % 2;
@@ -50,9 +50,11 @@ void update(Drop *rain[])
       init(rain[i]);
     rain[i]->x += rain[i]->sway;
     rain[i]->y += rain[i]->z;
-    rain[i]->z += G;
-    if (rain[i]->sway <= 10)
+    if (rain[i]->z < 30)
+      rain[i]->z *= G;
+    if (rain[i]->sway <= 6)
       rain[i]->sway *= WIND;
+    // printf("z= %f\n", rain[i]->z);
   }
 }
 
