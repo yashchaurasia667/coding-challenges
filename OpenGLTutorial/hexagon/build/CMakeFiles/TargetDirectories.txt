@@ -1,3 +1,0 @@
-C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build/CMakeFiles/hex.dir
-C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build/CMakeFiles/edit_cache.dir
-C:/Users/yashc/Documents/Stuff/coding challenges/OpenGLTutorial/hexagon/build/CMakeFiles/rebuild_cache.dir
