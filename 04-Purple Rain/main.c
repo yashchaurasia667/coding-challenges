@@ -6,8 +6,8 @@
 #define WINW 800
 #define WINH 600
 #define FPS 60
-#define G 2
-#define DROPS 1000
+#define G 1.05
+#define DROPS 500
 #define WIND 1.07
 
 struct drop
