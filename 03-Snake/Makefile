@@ -1,13 +1,13 @@
-CC= gcc
+CC= g++
 CFLAGS= -Wall -Wextra
 LIBS= -lraylib -lGL
 DEPENDENCIES=
 
 default: main
 
-main: main.c
+main: src/main.cpp
 	mkdir -p build
-	$(CC) $(CFLAGS) -o build/snake $(DEPENDENCIES) main.c $(LIBS)
+	$(CC) $(CFLAGS) -o build/snake $(DEPENDENCIES) src/main.cpp $(LIBS)
 
 clean: build
 	rm -rf build
