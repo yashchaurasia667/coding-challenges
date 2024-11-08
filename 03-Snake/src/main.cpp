@@ -3,7 +3,7 @@
 #include "snake.h"
 #include <raylib.h>
 
-#define FPS 10
+#define FPS 5
 #define SPEED 40
 
 void draw(std::vector<snake> body)
@@ -16,17 +16,26 @@ std::vector<snake> update(std::vector<snake> body)
 {
   for (size_t i = 0; i < body.size(); i++)
   {
-  //   if (i != 0)
-  //   {
-  //     body[i].segement = body[i - 1].segement;
-  //     body[i - 1].segement.x += (SPEED * body[i - 1].speed.x);
-  //     body[i - 1].segement.y += (SPEED * body[i - 1].speed.y);
-  //   }
-  //   else
-  //   {
-  //     body[i].segement.x += (SPEED * body[i].speed.x);
-  //     body[i].segement.y += (SPEED * body[i].speed.y);
-  //   }
+    float px, py;
+    if (i != 0)
+    {
+      int tx = body[i].segement.x;
+      int ty = body[i].segement.y;
+
+      body[i] = body[i - 1];
+      body[i].segement.x = px;
+      body[i].segement.y = py;
+
+      px = tx;
+      py = ty;
+    }
+    else
+    {
+      px = body[i].segement.x;
+      py = body[i].segement.y;
+      body[i].segement.x += (SPEED * body[i].speed.x);
+      body[i].segement.y += (SPEED * body[i].speed.y);
+    }
   }
   return body;
 }
@@ -110,8 +119,8 @@ int main()
     }
     DrawRectangleRec(food, RED);
 
-    draw(body);
     body = update(body);
+    draw(body);
 
     eaten = CheckCollisionRecs(body[0].segement, food);
 
