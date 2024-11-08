@@ -3,13 +3,18 @@
 #include "snake.h"
 #include <raylib.h>
 
-#define FPS 5
+#define FPS 10
 #define SPEED 40
 
 void draw(std::vector<snake> body)
 {
+  Color snakeColor = GREEN;
   for (size_t i = 0; i < body.size(); i++)
-    DrawRectangleRec(body[i].segement, WHITE);
+  {
+
+    DrawRectangleRec(body[i].segement, snakeColor);
+    snakeColor = WHITE;
+  }
 }
 
 std::vector<snake> update(std::vector<snake> body)
@@ -33,9 +38,18 @@ std::vector<snake> update(std::vector<snake> body)
     {
       px = body[i].segement.x;
       py = body[i].segement.y;
+
       body[i].segement.x += (SPEED * body[i].speed.x);
       body[i].segement.y += (SPEED * body[i].speed.y);
     }
+    if (body[i].segement.x > GetScreenWidth())
+      body[i].segement.x = 0;
+    else if (body[i].segement.x < 0)
+      body[i].segement.x = GetScreenWidth() - 40;
+    if (body[i].segement.y > GetScreenHeight())
+      body[i].segement.y = 0;
+    else if (body[i].segement.y < 0)
+      body[i].segement.y = GetScreenHeight() - 40;
   }
   return body;
 }
@@ -81,6 +95,26 @@ snake add_segment(snake last)
   return *tail;
 }
 
+bool gameOver(std::vector<snake> body)
+{
+  bool gameover = false;
+  for (size_t i = 0; i < body.size(); i++)
+  {
+    for (size_t j = 0; j < body.size(); j++)
+    {
+      if (i == j)
+        continue;
+      if (gameover)
+        break;
+      gameover = CheckCollisionRecs(body[i].segement, body[j].segement);
+    }
+    if (gameover)
+      break;
+  }
+
+  return gameover;
+}
+
 int main()
 {
   int winw = 800, winh = 600;
@@ -121,6 +155,11 @@ int main()
 
     body = update(body);
     draw(body);
+    if (gameOver(body))
+    {
+      std::cout << "GAME OVER" << std::endl;
+      break;
+    }
 
     eaten = CheckCollisionRecs(body[0].segement, food);
 
