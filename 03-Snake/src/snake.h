@@ -4,8 +4,7 @@
 class snake
 {
 public:
-  // Vector2 position;
   Rectangle segement;
-  int speedX, speedY;
-  snake(Vector2 pos, int sX = 1, int sY = 0);
+  Vector2 speed;
+  snake(Vector2 pos, Vector2 sp = {1, 0});
 };

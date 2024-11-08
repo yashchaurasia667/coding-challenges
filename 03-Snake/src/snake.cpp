@@ -1,9 +1,8 @@
 #include "snake.h"
+#include <iostream>
 
-snake::snake(Vector2 pos, int sX, int sY)
+snake::snake(Vector2 pos, Vector2 sp)
 {
-  // position = pos;
   segement = {pos.x, pos.y, 40, 40};
-  speedX = 1;
-  speedY = 0;
+  speed = sp;
 }
