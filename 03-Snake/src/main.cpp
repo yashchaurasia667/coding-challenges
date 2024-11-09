@@ -3,8 +3,9 @@
 #include "snake.h"
 #include <raylib.h>
 
-#define FPS 10
+#define FPS 20
 #define SPEED 40
+#define FOODPOINT 50
 
 void draw(std::vector<snake> body)
 {
@@ -42,11 +43,11 @@ std::vector<snake> update(std::vector<snake> body)
       body[i].segement.x += (SPEED * body[i].speed.x);
       body[i].segement.y += (SPEED * body[i].speed.y);
     }
-    if (body[i].segement.x > GetScreenWidth())
+    if (body[i].segement.x > GetScreenWidth() - 40)
       body[i].segement.x = 0;
     else if (body[i].segement.x < 0)
       body[i].segement.x = GetScreenWidth() - 40;
-    if (body[i].segement.y > GetScreenHeight())
+    if (body[i].segement.y > GetScreenHeight() - 40)
       body[i].segement.y = 0;
     else if (body[i].segement.y < 0)
       body[i].segement.y = GetScreenHeight() - 40;
@@ -54,13 +55,29 @@ std::vector<snake> update(std::vector<snake> body)
   return body;
 }
 
-Vector2 renderFood(int width, int height)
+Rectangle renderFood(std::vector<snake> body)
 {
-  float x = rand() % (width - 30);
-  float y = rand() % (height - 30);
+  Rectangle food;
+  bool collision = false;
+  do
+  {
+    float x = rand() % (GetRenderWidth() - 30);
+    float y = rand() % (GetRenderHeight() - 30);
+    food = {x, y, 30, 30};
+
+    for (size_t i = 0; i < body.size(); i++)
+    {
+      if (CheckCollisionRecs(body[i].segement, food))
+      {
+        collision = true;
+        break;
+      }
+      collision = false;
+    }
+  } while (collision);
 
   // std::cout << "x: " << x << "\ny: " << y << std::endl;
-  return {x, y};
+  return food;
 }
 
 snake handleInput(key_t key, snake head)
@@ -100,10 +117,8 @@ bool gameOver(std::vector<snake> body)
   bool gameover = false;
   for (size_t i = 0; i < body.size(); i++)
   {
-    for (size_t j = 0; j < body.size(); j++)
+    for (size_t j = i + 1; j < body.size(); j++)
     {
-      if (i == j)
-        continue;
       if (gameover)
         break;
       gameover = CheckCollisionRecs(body[i].segement, body[j].segement);
@@ -117,6 +132,7 @@ bool gameOver(std::vector<snake> body)
 
 int main()
 {
+  int score = 0;
   int winw = 800, winh = 600;
   InitWindow(winw, winh, "Snake");
   SetExitKey(KEY_Q);
@@ -128,12 +144,13 @@ int main()
   snake *segment = new snake({100, 100});
   body.push_back(*segment);
 
-  Vector2 foodPos = renderFood(winw, winh);
-  Rectangle food = {foodPos.x, foodPos.y, 30, 30};
+  Rectangle food = renderFood(body);
   bool eaten = false;
+  bool gameover;
 
   while (!WindowShouldClose())
   {
+
     if (winw != GetScreenWidth() || winh != GetScreenHeight())
     {
       winw = GetScreenWidth();
@@ -145,25 +162,29 @@ int main()
 
     if (eaten)
     {
+      score += FOODPOINT;
       eaten = false;
-      foodPos = renderFood(winw, winh);
-      food = {foodPos.x, foodPos.y, 30, 30};
+      food = renderFood(body);
       // std::cout << "speed of last segment " << body[body.size() - 1].speed.x << " " << body[body.size() - 1].speed.y << std::endl;
       body.push_back(add_segment(body[body.size() - 1]));
     }
     DrawRectangleRec(food, RED);
 
-    body = update(body);
-    draw(body);
-    if (gameOver(body))
+    if (!gameover)
     {
-      std::cout << "GAME OVER" << std::endl;
-      break;
+      body = update(body);
+      gameover = gameOver(body);
     }
+    draw(body);
 
     eaten = CheckCollisionRecs(body[0].segement, food);
 
     body[0] = handleInput(GetKeyPressed(), body[0]);
+
+    DrawText(TextFormat("Score: %d", score), 10, 10, 40, BLUE);
+
+    if (gameover)
+      DrawText("GAME OVER", winw / 2 - 200, winh / 2 - 40, 80, RED);
 
     EndDrawing();
   }
