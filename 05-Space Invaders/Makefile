@@ -1,7 +1,7 @@
 CC= g++
 CFLAGS= -Wall -Wextra
 LIBS= -lraylib -lGL
-DEPENDENCIES=
+DEPENDENCIES= src/sprite.cpp
 
 default: build/main
 
