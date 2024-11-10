@@ -1,0 +1,16 @@
+CC= g++
+CFLAGS= -Wall -Wextra
+LIBS= -lraylib -lGL
+DEPENDENCIES=
+
+default: build/main
+
+build/main: src/main.cpp
+	mkdir -p build
+	$(CC) $(CFLAGS) -o $@ $(DEPENDENCIES) $< $(LIBS)
+
+clean: build
+	rm -rf build
+
+run: build/main
+	build/main
