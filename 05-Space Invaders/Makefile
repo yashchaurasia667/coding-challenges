@@ -5,7 +5,7 @@ DEPENDENCIES= src/sprite.cpp
 
 default: build/main
 
-build/main: src/main.cpp
+build/main: src/main.cpp src/sprite.cpp
 	mkdir -p build
 	$(CC) $(CFLAGS) -o $@ $(DEPENDENCIES) $< $(LIBS)
 

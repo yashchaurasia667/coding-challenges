@@ -20,8 +20,17 @@ void Sprite::draw()
 
 void Sprite::move(int strideX, int strideY)
 {
-  if (position.x <= GetScreenWidth() - 90 && position.x >= 10)
-    position.x += strideX;
-  if (position.y <= GetScreenHeight() - 90 && position.x >= 10)
-    position.y += strideY;
+  position.x += strideX;
+  position.y += strideY;
+
+  if (position.x < 0)
+    position.x = 0;
+  else if (position.x > GetScreenWidth() - SPRITE_LEN)
+    position.x = GetScreenWidth() - SPRITE_LEN;
+
+  if (position.y < 0)
+    position.y = 0;
+  else if (position.y > GetScreenHeight() - SPRITE_LEN)
+    position.y = GetScreenHeight() - SPRITE_LEN;
+  // std::cout << "screenwidth = " << GetScreenWidth() << std::endl;
 }
