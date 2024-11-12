@@ -1,19 +1,27 @@
 #include "sprite.h"
 
-Sprite::Sprite(const char *filepath)
+Sprite::Sprite(const char *filepath, Vector2 pos)
 {
+  position = pos;
   sprite = LoadImage(filepath);
   ImageResize(&sprite, SPRITE_LEN, SPRITE_LEN);
   texture = LoadTextureFromImage(sprite);
   UnloadImage(sprite);
 }
 
-Sprite::~Sprite()
+// Sprite::~Sprite()
+// {
+// }
+
+void Sprite::draw()
 {
-  UnloadTexture(texture);
+  DrawTexture(texture, position.x, position.y, WHITE);
 }
 
-void Sprite::draw(int x, int y)
+void Sprite::move(int strideX, int strideY)
 {
-  DrawTexture(texture, x, y, WHITE);
+  if (position.x <= GetScreenWidth() - 90 && position.x >= 10)
+    position.x += strideX;
+  if (position.y <= GetScreenHeight() - 90 && position.x >= 10)
+    position.y += strideY;
 }
