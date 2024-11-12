@@ -11,8 +11,8 @@ public:
   void move(int strideX, int strideY);
   int SPRITE_LEN = 80;
   Texture2D texture;
+  Vector2 position;
 
 private:
-  Vector2 position;
   Image sprite;
 };
