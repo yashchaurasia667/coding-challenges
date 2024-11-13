@@ -1,17 +1,21 @@
 #pragma once
 
 #include <raylib.h>
+#include <vector>
+
+#include "sprite.h"
 
 class Bullet
 {
 private:
-  Vector2 position;
   Color color;
   float width, height;
 
 public:
+  Vector2 position;
   Bullet(Vector2 pos, float width, float height, Color color);
   void update(int stepY);
+  bool collision(std::vector<Sprite> collisionRecs);
   void draw();
   // ~Bullet();
 };

@@ -1,9 +1,11 @@
 #include "sprite.h"
 
-Sprite::Sprite(const char *filepath, Vector2 pos)
+Sprite::Sprite(Vector2 pos, std::string name)
 {
   position = pos;
-  sprite = LoadImage(filepath);
+  this->name = name;
+  std::string path = "./src/sprites/" + name;
+  sprite = LoadImage(path.c_str());
   ImageResize(&sprite, SPRITE_LEN, SPRITE_LEN);
   texture = LoadTextureFromImage(sprite);
   UnloadImage(sprite);
@@ -33,4 +35,17 @@ void Sprite::move(int strideX, int strideY)
   else if (position.y > GetScreenHeight() - SPRITE_LEN)
     position.y = GetScreenHeight() - SPRITE_LEN;
   // std::cout << "screenwidth = " << GetScreenWidth() << std::endl;
+}
+
+void Sprite::changeTexture(const char *name)
+{
+  // std::cout << name << std::endl;
+  UnloadTexture(texture);
+  this->name = name;
+
+  sprite = LoadImage(name);
+  ImageResize(&sprite, SPRITE_LEN, SPRITE_LEN);
+  texture = LoadTextureFromImage(sprite);
+
+  UnloadImage(sprite);
 }

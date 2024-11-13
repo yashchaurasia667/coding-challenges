@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 #include <raylib.h>
+
 #include "sprite.h"
 #include "bullet.h"
 
@@ -26,9 +28,7 @@ std::vector<Sprite> createRow(int y)
   for (int i = 0; i < WIN_W / SPRITE_LEN; i++)
   {
     int choice = rand() % enemies.size();
-    std::string path = "./src/sprites/" + enemies[choice];
-    const char *filepath = path.c_str();
-    Sprite *s = new Sprite(filepath, {i * SPRITE_LEN, y * SPRITE_LEN});
+    Sprite *s = new Sprite({i * SPRITE_LEN, y * SPRITE_LEN}, enemies[choice]);
     row.push_back(*s);
   }
   return row;
@@ -36,7 +36,6 @@ std::vector<Sprite> createRow(int y)
 
 Bullet shoot(int x, int y)
 {
-  // std::cout << "shot" << std::endl;
   Bullet *b = new Bullet({x + SPRITE_LEN / 2, y + SPRITE_LEN / 2}, 10, 15, YELLOW);
   return *b;
 }
@@ -44,6 +43,7 @@ Bullet shoot(int x, int y)
 int main()
 {
   srand(time(0));
+  auto start = std::chrono::high_resolution_clock::now();
 
   std::cout << "Space Invaders" << std::endl;
 
@@ -54,14 +54,12 @@ int main()
   SetTargetFPS(60);
 
   Vector2 pos = {WIN_W / 2, WIN_H - 80};
-  Sprite *player = new Sprite("./src/sprites/ufo.png", pos);
+  Sprite *player = new Sprite(pos, "ufo.png");
 
   std::vector<std::vector<Sprite>> rows;
   rows.push_back(createRow(0));
 
   std::vector<Bullet> bullets;
-
-  time_t start = time(0);
 
   while (!WindowShouldClose())
   {
@@ -76,12 +74,26 @@ int main()
       bullets.push_back(shoot(player->position.x, player->position.y));
 
     for (Bullet &bullet : bullets)
-    {
       bullet.draw();
-      if (time(0) - start > 0.3) {
-        start = time(0);
+
+    auto now = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<float> duration = now - start;
+
+    if (duration.count() > 0.5)
+    {
+      for (Bullet &bullet : bullets)
+      {
+        std::vector<Sprite> collisionrec;
+        int col = (bullet.position.x - 40) / 80;
+
+        // std::cout << col << std::endl;
+        for (size_t i = 0; i < rows.size(); i++)
+          collisionrec.push_back(rows[i][col]);
+
         bullet.update(SPRITE_LEN);
+        bullet.collision(collisionrec);
       }
+      start = std::chrono::high_resolution_clock::now();
     }
 
     player->draw();
