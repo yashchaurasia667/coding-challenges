@@ -37,13 +37,13 @@ void Sprite::move(int strideX, int strideY)
   // std::cout << "screenwidth = " << GetScreenWidth() << std::endl;
 }
 
-void Sprite::changeTexture(const char *name)
+void Sprite::changeTexture(std::string name)
 {
   // std::cout << name << std::endl;
   UnloadTexture(texture);
   this->name = name;
 
-  sprite = LoadImage(name);
+  sprite = LoadImage(name.c_str());
   ImageResize(&sprite, SPRITE_LEN, SPRITE_LEN);
   texture = LoadTextureFromImage(sprite);
 

@@ -14,19 +14,21 @@ void Bullet::update(int stepY)
   position.y -= stepY;
 }
 
-bool Bullet::collision(std::vector<Sprite> collisionRecs)
+bool Bullet::collision(Sprite &rec)
 {
   Rectangle bullet = {position.x, position.y, width, height};
-  for (Sprite rec : collisionRecs)
-  {
-    int collision = CheckCollisionRecs(bullet, (Rectangle){rec.position.x, rec.position.y, rec.SPRITE_LEN, rec.SPRITE_LEN});
+  int collision;
+  // for (Sprite rec : collisionRecs)
+  // {
+    collision = CheckCollisionRecs(bullet, (Rectangle){rec.position.x, rec.position.y, (float)rec.SPRITE_LEN, (float)rec.SPRITE_LEN});
     if (collision && rec.name != "blank.png" && rec.name != "ufo.png")
     {
       std::cout << "target hit" << std::endl;
       // (&rec)->name = "blank.png";
-      rec.changeTexture("blank.png");
+      rec.changeTexture("./src/sprites/blank.png");
+      return collision;
     }
-  }
+  // }
   return false;
 }
 

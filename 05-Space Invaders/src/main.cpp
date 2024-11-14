@@ -12,7 +12,11 @@ const int WIN_W = 1280;
 const int WIN_H = 720;
 std::vector<std::string> enemies = {"crab.png", "jellyfish.png", "squid.png"};
 
-Bullet shoot(int x, int y);
+Bullet shoot(int x, int y)
+{
+  Bullet *b = new Bullet({x + SPRITE_LEN / 2, y + SPRITE_LEN / 2}, 10, 15, YELLOW);
+  return *b;
+}
 
 void handleInput(Sprite *sprite)
 {
@@ -28,16 +32,10 @@ std::vector<Sprite> createRow(int y)
   for (int i = 0; i < WIN_W / SPRITE_LEN; i++)
   {
     int choice = rand() % enemies.size();
-    Sprite *s = new Sprite({i * SPRITE_LEN, y * SPRITE_LEN}, enemies[choice]);
+    Sprite *s = new Sprite({(int)(i * SPRITE_LEN), (int)(y * SPRITE_LEN)}, enemies[choice]);
     row.push_back(*s);
   }
   return row;
-}
-
-Bullet shoot(int x, int y)
-{
-  Bullet *b = new Bullet({x + SPRITE_LEN / 2, y + SPRITE_LEN / 2}, 10, 15, YELLOW);
-  return *b;
 }
 
 int main()
@@ -87,11 +85,9 @@ int main()
         int col = (bullet.position.x - 40) / 80;
 
         // std::cout << col << std::endl;
-        for (size_t i = 0; i < rows.size(); i++)
-          collisionrec.push_back(rows[i][col]);
-
         bullet.update(SPRITE_LEN);
-        bullet.collision(collisionrec);
+        for (size_t i = 0; i < rows.size(); i++)
+          bullet.collision(rows[i][col]);
       }
       start = std::chrono::high_resolution_clock::now();
     }

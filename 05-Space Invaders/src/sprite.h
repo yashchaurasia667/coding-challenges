@@ -13,7 +13,7 @@ public:
   Texture2D texture;
   Vector2 position;
   std::string name;
-  void changeTexture(const char *name);
+  void changeTexture(std::string name);
 
 private:
   Image sprite;

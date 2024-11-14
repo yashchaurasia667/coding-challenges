@@ -15,7 +15,7 @@ public:
   Vector2 position;
   Bullet(Vector2 pos, float width, float height, Color color);
   void update(int stepY);
-  bool collision(std::vector<Sprite> collisionRecs);
+  bool collision(Sprite &rec);
   void draw();
   // ~Bullet();
 };
