@@ -17,18 +17,15 @@ void Bullet::update(int stepY)
 bool Bullet::collision(Sprite &rec)
 {
   Rectangle bullet = {position.x, position.y, width, height};
-  int collision;
-  // for (Sprite rec : collisionRecs)
-  // {
-    collision = CheckCollisionRecs(bullet, (Rectangle){rec.position.x, rec.position.y, (float)rec.SPRITE_LEN, (float)rec.SPRITE_LEN});
-    if (collision && rec.name != "blank.png" && rec.name != "ufo.png")
-    {
-      std::cout << "target hit" << std::endl;
-      // (&rec)->name = "blank.png";
-      rec.changeTexture("./src/sprites/blank.png");
-      return collision;
-    }
-  // }
+  // std::cout << "x = " << rec.position.x << "\ny = " << rec.position.y << std::endl;
+  std::cout << rec.name << std::endl;
+  int collision = CheckCollisionRecs(bullet, (Rectangle){rec.position.x, rec.position.y, (float)rec.SPRITE_LEN, (float)rec.SPRITE_LEN});
+  if (collision && rec.name != "blank.png" && rec.name != "ufo.png")
+  {
+    std::cout << "target hit" << std::endl;
+    rec.changeTexture("blank.png");
+    return true;
+  }
   return false;
 }
 

@@ -43,6 +43,7 @@ void Sprite::changeTexture(std::string name)
   UnloadTexture(texture);
   this->name = name;
 
+  name = "./src/sprites/"+name;
   sprite = LoadImage(name.c_str());
   ImageResize(&sprite, SPRITE_LEN, SPRITE_LEN);
   texture = LoadTextureFromImage(sprite);

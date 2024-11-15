@@ -14,7 +14,7 @@ std::vector<std::string> enemies = {"crab.png", "jellyfish.png", "squid.png"};
 
 Bullet shoot(int x, int y)
 {
-  Bullet *b = new Bullet({x + SPRITE_LEN / 2, y + SPRITE_LEN / 2}, 10, 15, YELLOW);
+  Bullet *b = new Bullet({x + SPRITE_LEN / 2.0f, y + SPRITE_LEN / 2.0f}, 10, 15, YELLOW);
   return *b;
 }
 
@@ -32,7 +32,7 @@ std::vector<Sprite> createRow(int y)
   for (int i = 0; i < WIN_W / SPRITE_LEN; i++)
   {
     int choice = rand() % enemies.size();
-    Sprite *s = new Sprite({(int)(i * SPRITE_LEN), (int)(y * SPRITE_LEN)}, enemies[choice]);
+    Sprite *s = new Sprite({i * SPRITE_LEN * 1.0f, y * SPRITE_LEN * 1.0f}, enemies[choice]);
     row.push_back(*s);
   }
   return row;
@@ -56,6 +56,7 @@ int main()
 
   std::vector<std::vector<Sprite>> rows;
   rows.push_back(createRow(0));
+  rows.push_back(createRow(1));
 
   std::vector<Bullet> bullets;
 
@@ -79,15 +80,25 @@ int main()
 
     if (duration.count() > 0.5)
     {
-      for (Bullet &bullet : bullets)
+      for (size_t b = 0; b < bullets.size(); b++)
       {
-        std::vector<Sprite> collisionrec;
-        int col = (bullet.position.x - 40) / 80;
+        bool collision = false;
+        int col = (bullets[b].position.x - 40) / 80;
 
-        // std::cout << col << std::endl;
-        bullet.update(SPRITE_LEN);
-        for (size_t i = 0; i < rows.size(); i++)
-          bullet.collision(rows[i][col]);
+        for (size_t j = 0; j < rows.size(); j++)
+        {
+          // std::cout << "x = " << rows[j][col].position.x << "\ny = " << rows[j][col].position.y << std::endl;
+          collision = bullets[b].collision(rows[j][col]);
+          if (collision)
+          {
+            bullets.erase(bullets.begin() + b);
+            break;
+          }
+        }
+        if (collision)
+          break;
+
+        bullets[b].update(SPRITE_LEN);
       }
       start = std::chrono::high_resolution_clock::now();
     }
