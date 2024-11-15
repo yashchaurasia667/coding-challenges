@@ -41,7 +41,8 @@ std::vector<Sprite> createRow(int y)
 int main()
 {
   srand(time(0));
-  auto start = std::chrono::high_resolution_clock::now();
+  auto bulletTime = std::chrono::high_resolution_clock::now();
+  auto rowTime = std::chrono::high_resolution_clock::now();
 
   std::cout << "Space Invaders" << std::endl;
 
@@ -55,8 +56,8 @@ int main()
   Sprite *player = new Sprite(pos, "ufo.png");
 
   std::vector<std::vector<Sprite>> rows;
-  rows.push_back(createRow(0));
-  rows.push_back(createRow(1));
+  int rowNum = 0;
+  rows.push_back(createRow(rowNum++));
 
   std::vector<Bullet> bullets;
 
@@ -76,7 +77,7 @@ int main()
       bullet.draw();
 
     auto now = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<float> duration = now - start;
+    std::chrono::duration<float> duration = now - bulletTime;
 
     if (duration.count() > 0.5)
     {
@@ -91,7 +92,21 @@ int main()
           collision = bullets[b].collision(rows[j][col]);
           if (collision)
           {
+            int deleteRow = rows[rows.size() - 1].size();
+            for (size_t i = 0; i < rows[rows.size() - 1].size(); i++)
+            {
+              if (rows[rows.size() - 1][i].name != "blank.png")
+              {
+                deleteRow = -1;
+                break;
+              }
+            }
+
             bullets.erase(bullets.begin() + b);
+
+            if (deleteRow != -1)
+              rows.erase(rows.begin() + deleteRow);
+
             break;
           }
         }
@@ -100,7 +115,15 @@ int main()
 
         bullets[b].update(SPRITE_LEN);
       }
-      start = std::chrono::high_resolution_clock::now();
+      bulletTime = std::chrono::high_resolution_clock::now();
+    }
+
+    now = std::chrono::high_resolution_clock::now();
+    duration = now - rowTime;
+    if (duration.count() > 30)
+    {
+      rows.push_back(createRow(rowNum++));
+      rowTime = std::chrono::high_resolution_clock::now();
     }
 
     player->draw();
