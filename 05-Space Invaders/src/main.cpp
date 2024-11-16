@@ -79,7 +79,7 @@ int main()
     auto now = std::chrono::high_resolution_clock::now();
     std::chrono::duration<float> duration = now - bulletTime;
 
-    if (duration.count() > 0.5)
+    if (duration.count() > 0.4)
     {
       for (size_t b = 0; b < bullets.size(); b++)
       {
@@ -105,7 +105,10 @@ int main()
             bullets.erase(bullets.begin() + b);
 
             if (deleteRow != -1)
+            {
               rows.erase(rows.begin() + deleteRow);
+              rowNum--;
+            }
 
             break;
           }
@@ -114,8 +117,8 @@ int main()
           break;
 
         bullets[b].update(SPRITE_LEN);
-      }
       bulletTime = std::chrono::high_resolution_clock::now();
+      }
     }
 
     now = std::chrono::high_resolution_clock::now();
